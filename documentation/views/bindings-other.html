@@ -1,0 +1,118 @@
+<h1>All The Rest</h1>
+<p>
+	Most bindings are simple enough that they don't need a whole page
+	to be explained. Below is a quick dump of the remaining bindings.
+</p>
+<table>
+	<tbody>
+		<tr>
+			<td><p>data-bind</p></td>
+			<td>
+				<p>A two-way binding from input to viewmodel</p>
+				<code><pre>&lt;input type="text" data-bind="memberValue" /&gt;</pre></code>
+			</td>	
+		</tr>
+		<tr>
+			<td><p>data-class</p></td>
+			<td>
+				<p>Configures a set of class values based on a set of boolean(ish) values</p>
+				<code><pre>&lt;div data-class="{class1:member1, class2:member2.value}"&gt;&lt;/div&gt;</pre></code>
+				<p>Binds the value of a member to a class on the element</p>
+				<code><pre>&lt;div data-class="member.className"&gt;&lt;/div&gt;</pre></code>
+			</td>	
+		</tr>
+		<tr>
+			<td><p>data-click</p></td>
+			<td>
+				<p>Binds the click event of an element to a command handler on the view model</p>
+				<code><pre>&lt;div data-click="onclick"&gt;&lt;/div&gt;</pre></code>
+				<code><pre>
+app.viewmodel('my-vm', function() {
+   this.onclick = function(e) {
+      e.preventDefault();
+      console.log('clicked!');
+   };
+});
+				</pre></code>
+			</td>	
+		</tr>
+		<tr>
+			<td><p>data-submit</p></td>
+			<td>
+				<p>Binds the submit event of an element to a command handler on the view model</p>
+				<code><pre>&lt;div data-submit="onsubmit"&gt;&lt;/div&gt;</pre></code>
+				<code><pre>
+app.viewmodel('my-vm', function() {
+   this.onsubmit = function(e) {
+      e.preventDefault();
+      console.log('clicked!');
+   };
+});
+				</pre></code>
+			</td>	
+		</tr>
+		<tr>
+			<td><p>data-format</p></td>
+			<td>
+				<p>Formats a string with bindings from the view model and sets the content of the element with the resulting text.</p>
+				<code><pre>&lt;div data-format="Hello {{name1}} I am {{name2}}!"&gt;&lt;/div&gt;</pre></code>
+			</td>	
+		</tr>
+		<tr>
+			<td><p>data-show</p></td>
+			<td>
+				<p>Shows an element when the binding is true(ish)</p>
+				<code><pre>&lt;div data-show="isAuthorized"&gt;&lt;/div&gt;</pre></code>
+			</td>	
+		</tr>
+		<tr>
+			<td><p>data-hide</p></td>
+			<td>
+				<p>Hides an element when the binding is true(ish)</p>
+				<code><pre>&lt;div data-show="isUnauthorized"&gt;&lt;/div&gt;</pre></code>
+			</td>	
+		</tr>
+		<tr>
+			<td><p>data-href</p></td>
+			<td>
+				<p>Binds a member value to an element's "href" attribute</p>
+				<code><pre>&lt;div data-href="resourceUri"&gt;&lt;/div&gt;</pre></code>
+			</td>	
+		</tr>
+		<tr>
+			<td><p>data-src</p></td>
+			<td>
+				<p>Binds a member value to an element's "src" attribute</p>
+				<code><pre>&lt;div data-src="imageUri"&gt;&lt;/div&gt;</pre></code>
+			</td>	
+		</tr>
+		<tr>
+			<td><p>data-title</p></td>
+			<td>
+				<p>Binds a member value to an element's "title" attribute</p>
+				<code><pre>&lt;div data-title="tooltipInfo"&gt;&lt;/div&gt;</pre></code>
+			</td>	
+		</tr>
+		<tr>
+			<td><p>data-html</p></td>
+			<td>
+				<p>Binds a member value to an element's inner html</p>
+				<code><pre>&lt;div data-html="liveStream"&gt;&lt;/div&gt;</pre></code>
+			</td>	
+		</tr>
+		<tr>
+			<td><p>data-routed</p></td>
+			<td>
+				<p>Responds to hash path changes and loads configured routes into an element</p>
+				<code><pre>&lt;div data-routed&gt;&lt;/div&gt;</pre></code>
+			</td>	
+		</tr>
+		<tr>
+			<td><p>data-view</p></td>
+			<td>
+				<p>Immediately loads a partial view and replaces the current element</p>
+				<code><pre>&lt;div data-view="views/my-partial.html"&gt;&lt;/div&gt;</pre></code>
+			</td>	
+		</tr>
+	</tbody>
+</table>

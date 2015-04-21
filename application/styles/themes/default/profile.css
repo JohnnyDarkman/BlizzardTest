@@ -1,0 +1,135 @@
+.profile img {
+	height: 300px;
+	max-width: 300px;
+	float: left;
+}
+
+.profile dl {
+	float: left;
+	width: 400px;
+	position: relative;
+}
+
+.profile dl dt {
+	width: 40%;
+	float: left;
+	clear: left;
+	margin: 0px; 
+	padding: 6px 10px;
+	text-align: right;
+	background: rgba(255, 255, 255, .1);
+}
+
+.profile dl dd {
+	width: 60%;
+	float: right;
+	clear: right;
+	margin: 0px;
+	padding: 5px 10px;
+	text-align: left;
+}
+
+.profile article, .profile h2 {
+	display: block;
+	clear: both;
+}
+
+.profile h2 {
+	padding-top: 50px;
+	position: relative;
+}
+
+.profile h2:before {
+	content: '';
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	position: absolute;
+	top: 25px;
+	left: 0px; right: 0px;
+	padding: 1px;
+}
+
+.profile .badge {
+	display: inline-block;
+	width: 128px; height: 64px;
+	background-size: contain;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	color: #002040;
+	font-size: 11px;
+	cursor: default;
+}
+
+.profile .badge.bronze { background-image: url('../../../assets/images/bronze.png'); }
+.profile .badge.silver { background-image: url('../../../assets/images/silver.png'); }
+.profile .badge.gold { background-image: url('../../../assets/images/gold.png'); }
+
+.profile .badge .award-count {
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	text-shadow: 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black;
+	padding: 6px 0px;
+	font-weight: bold;
+	color: white;
+}
+
+.profile .badge .award-name {
+	display: block;
+	text-align: center;
+	text-shadow: 1px 1px 1px black;
+	overflow: hidden;
+	white-space: nowrap;
+	width:100px;
+	margin: 0px auto;
+}
+
+.profile .answer-info {
+	background: rgba(255, 255, 255, .1);
+	margin-bottom: 5px;
+}
+
+.profile .answer-info header {
+	display: block;
+	background: rgba(255, 255, 255, .1);
+}	
+
+.profile .answer-info dl {
+	display: block;
+	float: none;
+	width: auto;
+	padding: 0px 5px;
+}
+
+.profile .answer-info dt, .profile .answer-info dd {
+	display: inline-block;
+	padding: 5px 0px; margin: 0px;
+	background: transparent;
+	font-size: 10px;
+	width: auto; height: auto;
+	float: none; clear: none;
+}
+
+.profile .answer-info dt {
+	color: #A0D0FF;
+}
+
+.profile .answer-info dt:after {
+	content: ':';
+}
+
+.profile .answer-info dd {
+	margin-right: 5px;
+}
+
+.profile .answer-info > a {
+	padding: 5px;
+	display: block;
+	word-break: break-word;
+}
+
+.profile .tags-cloud {
+	max-height: 300px;
+}
+

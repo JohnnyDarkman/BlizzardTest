@@ -1,0 +1,18 @@
+dl {
+	display: block;
+}
+
+dl > dt, dl > dd {
+	display: block;
+	white-space: nowrap;
+	float: left;
+	width: 200px;
+}
+
+dl > dt {
+	clear: left;
+}
+
+dl > dt:after {
+	content: ':'
+}

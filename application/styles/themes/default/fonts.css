@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'blizzard-light';
+    src: url('../../../assets/fonts/blizzardlight_3ARY7.eot');
+    src: url('../../../assets/fonts/blizzardlight_3ARY7.eot') format('embedded-opentype'),
+         url('../../../assets/fonts/blizzardlight_3ARY7.woff2') format('woff2'),
+         url('../../../assets/fonts/blizzardlight_3ARY7.woff') format('woff'),
+         url('../../../assets/fonts/blizzardlight_3ARY7.ttf') format('truetype'),
+         url('../../../assets/fonts/blizzardlight_3ARY7.svg#blizzardlight_3ARY7') format('svg');
+}
+@font-face {
+    font-family: 'blizzard';
+    src: url('../../../assets/fonts/blizzardregular_3GHNU.eot');
+    src: url('../../../assets/fonts/blizzardregular_3GHNU.eot') format('embedded-opentype'),
+         url('../../../assets/fonts/blizzardregular_3GHNU.woff2') format('woff2'),
+         url('../../../assets/fonts/blizzardregular_3GHNU.woff') format('woff'),
+         url('../../../assets/fonts/blizzardregular_3GHNU.ttf') format('truetype'),
+         url('../../../assets/fonts/blizzardregular_3GHNU.svg#blizzardregular_3GHNU') format('svg');
+}
+@font-face {
+    font-family: 'blizzard-italic';
+    src: url('../../../assets/fonts/blizzardregularitalic_1jLGm.eot');
+    src: url('../../../assets/fonts/blizzardregularitalic_1jLGm.eot') format('embedded-opentype'),
+         url('../../../assets/fonts/blizzardregularitalic_1jLGm.woff2') format('woff2'),
+         url('../../../assets/fonts/blizzardregularitalic_1jLGm.woff') format('woff'),
+         url('../../../assets/fonts/blizzardregularitalic_1jLGm.ttf') format('truetype'),
+         url('../../../assets/fonts/blizzardregularitalic_1jLGm.svg#blizzardregularitalic_1jLGm') format('svg');
+}
+@font-face {
+    font-family: 'logo';
+    src: url('../../../assets/fonts/neuropolitical_rg-webfont.eot');
+    src: url('../../../assets/fonts/neuropolitical_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../assets/fonts/neuropolitical_rg-webfont.woff2') format('woff2'),
+         url('../../../assets/fonts/neuropolitical_rg-webfont.woff') format('woff'),
+         url('../../../assets/fonts/neuropolitical_rg-webfont.ttf') format('truetype'),
+         url('../../../assets/fonts/neuropolitical_rg-webfont.svg#neuropoliticalregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,24 @@
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-family: 'blizzard-light';
+	margin-top: 0px;
+}
+
+h1 { 
+	text-indent: 25px;
+	font-size: 35px;
+}
+
+a {
+	color: #00b6ff;
+	transition: all .1s ease;
+}
+
+a:hover { color: #FFFFFF; }
+
+small {
+	font-family: 'blizzard-light';
+	text-transform: none;
+	font-style: italic;
+}
+

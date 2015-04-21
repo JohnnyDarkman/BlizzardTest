@@ -1,0 +1,85 @@
+<h1>Utility Services <small>utilities.js &amp; html.js</small></h1>
+<p>
+	These are general utility services that provide mostly shortcut, extension
+	methods.
+</p>
+<p><strong>Utilities.js</strong></p>
+<table>
+	<tbody>
+		<tr><td>utilities.nothing</td>
+		<td>Always undefined</td></tr>
+		
+		<tr><td>utilities.is(value, type)</td>
+		<td>applies multiple methods of type matching</td></tr>
+		
+		<tr><td>utilities.locked(target, member)</td>
+		<td>returns true if the member can't be set on the target</td></tr>
+		
+		<tr><td>utilities.readonly(target, member, func)</td>
+		<td>creates a readonly getter property on the target</td></tr>
+		
+		<tr><td>utilities.constant(target, member, value)</td>
+		<td>creates a readonly value property on the target</td></tr>
+		
+		<tr><td>utilities.proxy(target, source, member)</td>
+		<td>proxies a value on the source to a matching member on the target</td></tr>
+		
+		<tr><td>utilities.override(target, member, func)</td>
+		<td>"intercepts" a function member on the target</td></tr>
+		
+		<tr><td>utilities.observe(target, member, callback)</td>
+		<td>creates an observable property on the target</td></tr>
+		
+		<tr><td>utilities.path(source, path)</td>
+		<td>follows a dot "." delimited member path starting from source</td></tr>
+		
+		<tr><td>utilities.watch(target, path, callback)</td>
+		<td>follows a path of observables and manages disposing callbacks</td></tr>
+		
+		<tr><td>utilities.copy(obj)</td>
+		<td>creates a shallow copy of an object</td></tr>
+		
+		<tr><td>utilities.merge(from, to)</td>
+		<td>performs a shallow merge from one object to another</td></tr>
+		
+		<tr><td>utilities.toarray(items)</td>
+		<td> attempts to convert any collection into an array</td></tr>
+		
+		<tr><td>utilities.distinct(items)</td>
+		<td> returns a filtered array of only "distinct" values</td></tr>
+		
+		<tr><td>utilities.domdepth(node)</td>
+		<td> returns how deep a node is in the document</td></tr>
+		
+		<tr><td>utilities.domsort(nodes)</td>
+		<td> returns a sorted array of nodes based on their depth in the document</td></tr>
+		
+		<tr><td>utilities.domquery(node, selector)</td>
+		<td> searches the node and its descendants (querySelectorAll)</td></tr>
+		
+		<tr><td>utilities.indom(element)</td>
+		<td> true if the element is "in" the document</td></tr>
+		
+		<tr><td>utilities.observable(model)</td>
+		<td> converts an existing object to an observable</td></tr>
+		
+		<tr><td>utilities.surrogate(model)</td>
+		<td> returns an observable proxy object</td></tr>
+	</tbody>
+</table>
+<p><strong>html.js</strong></p>
+<table>
+	<tbody>
+		<tr><td>html.encode(str)</td><td>HTML encodes a string</td></tr>
+		<tr><td>html.parse(str)</td><td>parses a string into elements</td></tr>
+		<tr><td>html.getInputValue(element)</td><td>returns the value of an input</td></tr>
+		<tr><td>html.setInputValue(element, value)</td><td>sets the value of an input</td></tr>
+		<tr><td>html.setStyle(selector, style)</td><td>adds a style rule to the document</td></tr>
+		<tr><td>html.removeClass(element, cls)</td><td>removes a class from an element</td></tr>
+		<tr><td>html.addClass(element, cls)</td><td>adds a class to an element</td></tr>
+		<tr><td>html.indom(element)</td><td>true if the element is currently in the DOM</td></tr>
+		<tr><td>html.formatParameters(obj)</td><td>Converts an object into a uri query string</td></tr>
+		<tr><td>html.formatUri(uri, params)</td><td>Formats together a uri and query object/string</td></tr>
+		<tr><td>html.parseQuery(params)</td><td>parses a uri query string into an object</td></tr>
+	</tbody>
+</tbody>

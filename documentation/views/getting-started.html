@@ -1,0 +1,32 @@
+<h1>Getting Started</h1>
+<p>
+	The first thing you need to do is create a new <em>Application</em> like so:
+</p>
+<code><pre>window.myApp = new Application(document);</pre></code>
+<p>
+	Now to create functionality you need to create a <em>ViewModel</em> in your javascript:
+</p>
+<code><pre>window.myApp.viewmodel('getting-started', function() {
+   this.myTitle = 'My First Application';
+   this.updateTitle = function() {
+      this.myTitle = 'My First Binding';
+   };
+});</pre></code>
+<p>
+	Lastly we must wire up the new functionality to the DOM in your html
+</p>
+<code><pre>
+&lt;div <strong>view-model="getting-started"</strong>&gt;
+   &lt;h1 <strong>data-format="{{myTitle}}"</strong>&gt;&lt;/h1&gt;
+   &lt;button <strong>data-click="updateTitle"</strong>&gt;Change The Words&lt;/button&gt;
+&lt;/div&gt;
+</pre></code>
+
+<p>
+	Go ahead! Try it out below:
+</p>
+
+<div view-model="getting-started">
+	<h1 data-format="{{myTitle}}"></h1>
+	<button data-click="updateTitle">Change The Words</button>
+</div>

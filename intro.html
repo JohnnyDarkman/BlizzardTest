@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<style>
+			@font-face {
+				font-family: 'warcraft';
+				src: url('intro/fonts/warcraft_font-webfont.eot');
+				src: url('intro/fonts/warcraft_font-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('intro/fonts/warcraft_font-webfont.woff2') format('woff2'),
+					 url('intro/fonts/warcraft_font-webfont.woff') format('woff'),
+					 url('intro/fonts/warcraft_font-webfont.ttf') format('truetype'),
+					 url('intro/fonts/warcraft_font-webfont.svg#warcraft_fontregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+
+			}	
+
+			body {
+				font-family: 'warcraft';
+				background: black;
+				color: black;
+				overflow-y: scroll;
+			}
+
+			h1 { 
+				text-align: center;
+				padding: 200px 0px;
+				font-size: 200; 
+			}
+		</style>
+	</head>
+	<body>
+		<h1 data-effect
+			data-effect-size="300"
+			data-effect-ratio="2.5"
+			data-effect-interval="75"
+			data-effect-duration="6">
+			BLIZZARD
+		</h1>
+		
+		<script>
+			setTimeout(function() { window.location.href = './about.html'; }, 8000);
+			
+			// Generates the @keyframes that will run the effect animation and applies a style to the element
+			// Uses multiple layers of text-shadow to create a veeeery cheap Blizzard shadowing effect
+			setTimeout(function() {
+				var css = '\r\n';
+				var elements = document.querySelectorAll('[data-effect]');
+					
+				for (var e = 0; e < elements.length; e++) {
+					var element = elements[e];
+					var effectSize = parseInt(element.getAttribute('data-effect-size') || '350');
+					var effectRatio = parseFloat(element.getAttribute('data-effect-ratio') || '1.25');
+					var layerInterval = parseInt(element.getAttribute('data-effect-interval') || '50');
+					var effectDuration = parseFloat(element.getAttribute('data-effect-duration') || '4');
+					
+					// The animation has 3 total keyframes
+					var right = [];
+					var left = [];
+					for (var p = 0; p < effectSize; p += layerInterval) {
+						right.push(' ' + (p * effectRatio) + 'px 0px ' + p + 'px blue'); // To the right
+						left.push(' ' + (-p * effectRatio) + 'px 0px ' + p + 'px blue'); // To the left
+					}
+					
+					// Need to write out a version for each browser
+					var effectName = 'logo-effect-ver-' + (e + 1);
+					var compatNames = ['-webkit-', '-moz-', '-ms-', '-o-', ''];
+					var keyframesBody = ' ' + effectName + ' { '
+						+ '0% { text-shadow: ' + right.join(',') + '; opacity: 0; } '
+						+ '5% { text-shadow: ' + right.join(',') + '; } '
+						+ '50% { opacity: 1; } '
+						+ '95% { text-shadow: ' + left.join(',') + '; } '
+						+ '100% { text-shadow: ' + left.join(',') + '; opacity: 0; } '
+						+ '}';
+					for (var c = 0; c < compatNames.length; c++) {
+						css = css + '@' + compatNames[c] + 'keyframes ' + keyframesBody + '\r\n';
+					}
+					var styleNames = ['animation', 'webkitAnimation', 'mozAnimation', 'msAnimation', 'oAnimation'];
+					for (var s = 0; s < styleNames.length; s++) {
+						if (styleNames[s] in element.style) {
+							element.style[styleNames[s]] = effectName + ' ' + effectDuration + 's ease';
+						}
+					}
+				}
+				
+				var styleBlock = document.createElement('style');
+				styleBlock.innerHTML = css;
+				document.querySelector('head').appendChild(styleBlock);
+			}, 1000);
+			
+		</script>
+	</body>
+</html>

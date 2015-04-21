@@ -1,0 +1,25 @@
+<section>
+	<header><h1>Search the things</h2></header>
+	<form data-submit="search">
+		<fieldset>
+			<label>
+				Question Title
+				<input type="text" data-bind="query" placeholder="words or phrases"/>
+			</label>
+			<label>
+				Sort By
+				<select name="searchSort" data-bind="sort">
+					<option value="activity">Activity</option>
+					<option value="votes">Votes</option>
+					<option value="creation">Creation Date</option>
+					<option value="relevance">Relevance</option>
+				</select>
+			</label>
+			<label>
+				Question Tags
+				<input type="text" data-bind="searchtags" />
+			</label>
+		<button type="submit">Search</button>
+		</fieldset>
+	</form>
+</section>

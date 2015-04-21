@@ -1,0 +1,18 @@
+<h1>viewmodels/profile.js</h1>
+<p>
+	I'll be honest, this view model is a mess. This was one of the last items to go in
+	and includes logic that would better fit in a service.
+</p>
+<p>
+	The view model exposes bindings (and queries data for) various user profile data if
+	the currently logged in account contains a profile. If there is no profile a cheap
+	looking modal will be displayed alerting the user that they are "Userless". If there
+	is no logged in user another modal will be shown alerting the user they must first
+	log in before viewing this page. This modal can only be seen by accessing the URI
+	of the page directly. There will be no page links made available to this page while
+	the user is logged out.
+</p>
+<p>
+	Should the user log out while on this page they will be redirected back to the default
+	hash path (empty). This will ultimately bring them back to the search page.
+</p>

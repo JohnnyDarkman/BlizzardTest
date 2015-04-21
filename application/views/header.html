@@ -1,0 +1,19 @@
+<header>
+	<h1>
+		<a href="#">EX&#183;NET</a>
+	</h1>
+	<nav>
+		<ul view-model="auth">
+			<li data-show="loggedIn" data-format="Welcome {{user.username}}!">
+				&nbsp;
+			</li>
+			<li data-view="application/views/login.html"></li>
+			<li view-model="search">
+				<form data-submit="search">
+					<input type="search" data-bind="query"/>
+					<button type="submit">Search</button>
+				</form>
+			</li>
+		</ul>
+	</nav>
+</header>

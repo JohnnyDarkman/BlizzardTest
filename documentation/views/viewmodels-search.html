@@ -1,0 +1,19 @@
+<h1>viewmodels/search.js</h1>
+<p>
+	This view model manages bindings and syncs with the "services/search.js" service.
+	It can also be used as a parent view model to provide search bindings and information
+	to other nested view models.
+</p>
+<p>
+	The auth view model provides two command handlers "search" and "next" which operate
+	the underlying search service to manage the application's current search results.
+<p>
+<p>
+	The search feature operates a little strange by setting the hash query instead of
+	calling the search service directly. This should be cleaned up in an imaginary future
+	release that will never happen.
+</p>
+<p>
+	The view model keeps in sync with the service using the listen feature provided by the
+	view object which will unsubscribe from the broadcast channel when the view is destroyed.
+</p>

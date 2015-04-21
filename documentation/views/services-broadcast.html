@@ -1,0 +1,17 @@
+<h1>services/broadcast.js</h1>
+<p>
+	The broadcast service is a singleton that coordinates subscriptions
+	by channel to a global message handler. This is useful when coordinating
+	unrelated sections of your view to react to global changes in your application's
+	state. For example when the user logs in or out.
+</p>
+<p>
+	The broadcast service is also integrated into Views and ViewModels which will auto
+	unsubscribe when being disposed.
+</p>
+<p>
+	Broadcast very simply exposes 3 functions: subscribe, unsubscribe, and send.
+	subscribe and send both accept a key or channel to be used as a filter for listeners.
+	The unsubscribe function accepts only a previously assigned callback which will then
+	be disassociated from any subscription made using the same instance of callback.
+</p>

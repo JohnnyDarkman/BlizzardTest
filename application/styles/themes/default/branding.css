@@ -1,0 +1,59 @@
+body > header > nav > ul:before,
+body > header > h1:before, 
+body > header > h2:before, 
+body > header > h3:before, 
+body > header > h4:before, 
+body > header > h5:before, 
+body > header > h6:before {
+	content: '';
+	display: inline-block;
+	background: url('../../../assets/images/brand.png') 50% 50% no-repeat transparent;
+	vertical-align: middle;
+}
+
+body > header > h1, 
+body > header > h2, 
+body > header > h3, 
+body > header > h4, 
+body > header > h5, 
+body > header > h6 {
+	font-family: 'logo';
+	text-transform: uppercase;
+	font-weight: normal;
+	margin: 0px;
+}
+
+body > header > h1 {
+	font-size: 23px;
+	padding: 20px 5px;
+	float: left;
+}
+
+body > header > nav > ul:before {
+	width: 36px;
+	height: 36px;
+	margin: 0px;
+	background-size: 75% auto;
+	background-color: #262626;
+	border-radius: 5px 0px 0px 5px;
+}
+
+body > header > h1:before,
+body > header > h2:before,
+body > header > h3:before,
+body > header > h4:before,
+body > header > h5:before,
+body > header > h6:before {
+	width: 2em; height: 2em;
+	margin: 0px 15px 0px 0px;
+	background-size: 100% auto;
+}
+
+body > header > h1 > a,
+body > header > h1 > a:focus,
+body > header > h1 > a:hover,
+body > header > h1 > a:active,
+body > header > h1 > a:visited {
+	color: white;
+}
+

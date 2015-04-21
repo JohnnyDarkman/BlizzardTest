@@ -1,0 +1,11 @@
+<h1>viewmodels/tag-cloud.js</h1>
+<p>
+	What makes this view model cool is it is expected to be a nested/child view model.
+	It reads the "tags" binding off of its parent view model and transforms the data
+	to support the tag-cloud partial view. Of course if your parent does not expose
+	a "tags" binding then shame on you.
+</p>
+<p>
+	This view model uses the "watch" feature on the parent view model to bind a handler
+	to change events on the "tags" member.
+</p>

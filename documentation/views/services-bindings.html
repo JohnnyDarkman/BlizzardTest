@@ -1,0 +1,63 @@
+<h1>services/bindings.js</h1>
+<p>
+	The bindings extension adds binding functionality to the framework. This is the part
+	of the framework that is responsible for watching the DOM, managing "Views" and
+	triggering/managing bindings. This is the most important part of the framework.
+</p>
+<p>
+	This extension operates by watching DOM mutations, creating "Views" for elements that
+	have bindings, and then making sure that associated objects are properly disposed of
+	as content leaves the DOM.
+</p>
+<p>
+	When an element is added that contains a registered binding (attribute) it will trigger
+	the creation of a View which is passed to the binding code through dependency injection.
+	"Views" are nested based on their hierarchy on the page layout. A View has access to its
+	parent and children as do the bindings associated with them.
+</p>
+<p>
+	Bindings can effect their environment in a few different ways. 
+</p>
+<ul>
+	<li>
+		Any binding can add to the "scope" of the View by exposing a "scope" property set to 
+		an object with named dependency instances.
+		<code><pre>
+Application.extend.binding(function() {
+   this.scope = { 
+      myDependency: 
+      'This string will be injected into any child/nested bindings if requested as a dependency'
+   };
+});
+		</pre></code>
+	</li>
+	<li>
+		Disposal tasks that should occur when the view is destroyed can be added to the View's
+		disposal chain by exposing a "dispose" property set to a disposal function.
+		<code><pre>
+Application.extend.binding(function() {
+   this.dispose = function() { console.log('I am disposed!'); }
+});
+		</pre></code>
+	</li>
+	<li>
+		Disposal tasks can also be added directly to the View object by setting the dispose
+		property to a disposal task.
+		<code><pre>
+Application.extend.binding(['view', function(view) {
+   view.dispose = function() { console.log('I will be disposed first'); };
+   view.dispose = function() { console.log('I will be disposed second'); };
+}]);
+		</pre></code>
+	</li>
+	<li>
+		A binding can prevent the binding process at a View and its descendants until it is ready.
+		<code><pre>
+Application.extend.binding(function() { // The pre-scan method below must not return false to get here
+   console.log('This message will never happen.');
+   
+}, function(view) { // This is a "pre-scan" function that is passed only the View
+   console.log('Because I am returning false here you will never see the above message.');
+   return false;
+});
+		</pre></code>

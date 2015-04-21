@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta xmlns="http://www.w3.org/1999/xhtml" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta xmlns="http://www.w3.org/1999/xhtml" name="viewport" content="width=device-width" />
+		<link href="application/styles/themes/application.css" type="text/css" rel="stylesheet" />
+		<script src="https://api.stackexchange.com/js/2.0/all.js"></script>
+		<script src="application/scripts/framework.js"></script>
+		<script src="application/scripts/application.js"></script>
+	</head>
+	<body view-model="root">
+		<header data-view="application/views/header.html"></header>
+		<main data-routed>
+		</main>
+		<footer>
+			Version: 1.0.0 ©2016 Me. No Rights Reserved
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./about.html">About</a>
+			&nbsp;|&nbsp;
+			<a href="./documentation.html">Docs</a>
+		</footer>
+		<div class="modal data-hide" data-show="throttled">
+			<h2>Application Throttled</h2>
+			<p>
+				This IP address has been throttled by the stackexchange api. 
+				Please check again in <span data-format="{{hours}}"></span> hours.
+			</p>
+		</div>
+		<script>
+			setTimeout(function() {
+				document.querySelector('body').setAttribute('data-ready', 'ready');
+			}, 500);
+		</script>
+	</body>
+</html>

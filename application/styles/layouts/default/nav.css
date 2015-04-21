@@ -1,0 +1,46 @@
+nav {
+	margin: 0px;
+	padding: 10px 0px;
+	position: relative;
+	border-radius: 5px;
+	white-space: nowrap;
+	text-align: center;
+}
+
+nav > a {
+	display: inline-block;
+	padding: 10px 25px;
+	margin: -10px 0px;
+}
+
+nav > ul {
+	display: block;
+	margin: -10px 0px;
+	padding: 0px;
+	list-style: none;
+	margin-before: 0px;
+	margin-after: 0px;
+	margin-start: 0px;
+	margin-end: 0px;
+	white-space: nowrap;
+}
+
+nav > ul > li {
+	display: inline-block;
+	margin: 0px;
+	padding: 10px 25px;
+	border-right: 1px solid #3F3F3F;
+}
+
+nav > ul > li:last-child { border-right: none; }
+
+nav > ul > li > *:first-child:last-child {
+	display: block;
+	margin: -10px -25px;
+	padding: 10px 25px;
+}
+
+aside > nav > ul > li {
+	display: block;
+	text-align: left;
+}

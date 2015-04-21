@@ -1,0 +1,8 @@
+body {
+	opacity: 0;
+	transition: opacity .5s ease;
+}
+
+body[data-ready] {
+	opacity: 1;
+}

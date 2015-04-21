@@ -1,0 +1,30 @@
+.modal {
+	position: fixed;
+	left: 0px; right: 0px;
+	top: 0px; bottom: 0px;
+	margin-left: auto !important; margin-right: auto !important;
+	margin-top: auto !important; margin-bottom: auto !important;
+	width: 400px; height: 300px;
+	background: white;
+	border-radius: 5px;
+	padding: 25px;
+	z-index: 999999;
+	font-size: 18px;
+}
+
+.modal:before {
+	content: '';
+	display: block;
+	position: fixed;
+	left: -0px; right: -0px;
+	top: -0px; bottom: -0px;
+	background: rgba(0, 0, 0, .5);
+	z-index: -1;
+}
+
+.modal > h1, .modal > h2, .modal > h3, .modal > h4, .modal > h5, .modal > h6 {
+	margin: -25px 0px 25px;
+	padding: 15px 0px;
+	border-bottom: 1px solid black;
+	text-align: center;
+}

@@ -1,0 +1,19 @@
+<h1>services/search.js</h1>
+
+<p>
+	This defines a singleton service which keeps track of the current search state
+	for the entire application. This service assumes that there is one "primary"
+	or "global" search that the application is dealing with. This service is designed
+	to act as a sync for other services and view models which can require the "search"
+	service as a dependency.
+</p>
+<p>
+	The service responds to route updates and offers a "load more" feature which 
+	queries the next page of results in place of regular paging.
+</p>
+<p>
+	This was originally all written in the search view model as a first pass and then
+	hastily separated out during a quick clean up pass before submission. Sadly, time
+	constraints kept me from doing a proper refactor here.
+</p>
+	

@@ -1,0 +1,5 @@
+body > main > section > article {
+	background: rgba(255, 255, 255, .1);
+	padding: 10px;
+	border-radius: 3px;
+}

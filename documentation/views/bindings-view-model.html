@@ -1,0 +1,55 @@
+<h1>View Models <small>and the view-model binding</small></h1>
+
+<p>
+	View-Model is a blocking binding meaning if the code for a specified view model
+	has not yet been loaded the element being bound and all of its descendents will
+	postpone binding until the view model is ready.
+</p>
+<p>
+	Once the view model has been loaded and is ready binding will continue and
+	the view-model will be passed down to descendent and sibling bindings as a
+	dependency. Most other bindings expect a viewmodel to be present and used as
+	the model that will be interacted with.
+</p>
+<p>
+	A view-model is newly constructed each time it is referenced in your markup.
+	View models are observable objects and so all values must be added to the view
+	model when it is being constructed. New member will not be added to the view
+	model after it has finished being constructed.
+</p>
+<p>
+	In order to observe property changes on a view model before it has finished 
+	constructing you can add your own notify, observe, and unobserve methods to
+	the view model that will act like interceptors.
+</p>
+<code><pre>
+app.viewmodel('my-view-model', function() {
+   this.notify = function(name) { console.log(name + ' was updated!'); }
+});
+</pre></code>
+<p>
+	All values set on a view model will be converted to properties after construction
+	is complete and the view model itelf will be frozen from any further changes. You
+	should try to avoid defining actual properties or doing anything that might 
+	interfere with this process. Unless, of course, you like broken applications.
+</p>
+<p>
+	A ".parent" property will be added to a view model after it has been constructed.
+	If you need access to the parent view model before that time you can have it injected.
+</p>
+<code><pre>
+app.viewmodel('my-view-model', ['viewmodel', function(parent) {
+	console.log(parent); // this is the parent view model
+}]);
+</pre></code>
+<p>
+	A ".watch(path, callback)" method will be added to the view model after it has been
+	constructed. This is usefull when creating custom bindings that need to watch direct 
+	or remote observable properties starting from the view model. There is no way to 
+	configure a watch on a view model before it has finished construction. 
+</p>
+<code><pre>
+Application.extend.binding('my-binding', ['viewmodel', function(viewmodel) {
+   viewmodel.watch('my.distant.value', function() { console.log('Updated!'); });
+}]);
+</pre></code>

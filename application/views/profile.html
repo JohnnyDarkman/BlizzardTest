@@ -1,0 +1,71 @@
+<section view-model="auth">
+	<section class="modal data-hide" data-hide="authenticated">
+		<h1>Not Logged In</h1>
+		<p>
+			You need to be logged in to view your profile.
+		</p>
+	</section>
+	
+	
+	<section data-show="authenticated">
+		<section view-model="profile" class="profile">
+			<section class="modal data-hide" data-show="userless">
+				<h1>You're Userless!</h1>
+				<p>
+					Your account has no user information.
+					Please create a user profile and try again.
+				</p>
+			</section>
+		
+			<article data-hide="userless data-hide">
+				<img data-src="user.profile_image" />
+				<dl>
+					<dt>Id</dt>				<dd data-format="{{user.user_id}}"></dd>
+					<dt>Name</dt>			<dd data-format="{{user.display_name}}"></dd>
+					<dt>Status</dt>			<dd data-format="{{user.user_type}}"></dd>
+					<dt>Reputation</dt>		<dd data-format="{{user.reputation}}"></dd>
+					<dt>Accept Rate</dt>	<dd data-format="{{user.accept_rate}}"></dd>
+					<dt>Created</dt>		<dd data-format="{{user.creation_date}}"></dd>
+					<dt>Answers</dt>		<dd data-format="{{user.answer_count}}"></dd>
+					<dt>Up Votes</dt>		<dd data-format="{{user.up_vote_count}}"></dd>
+					<dt>Down Votes</dt>		<dd data-format="{{user.down_vote_count}}"></dd>
+				</dl>
+				<p class="tag-cloud" data-view="application/views/tag-cloud.html"></p>
+			</article>
+			
+			<section>
+				<h2>About</h2>
+				<p data-html="user.about_me"></p>
+			</section>
+			
+			<section>
+				<h2>Badges</h2>
+				<div class="badge" data-template="badges" 
+					 data-class="rank"
+					 data-title="description">
+					<span class="award-count" data-format="{{award_count}}"></span>
+					<span class="award-name" data-format="{{name}}"></span>
+				</div>
+			</section>
+			
+			<section>
+				<h2>Answers</h2>
+				<article class="answer-info" data-template="answers">
+					<header>
+						<dl>
+							<dt>Id</dt>			<dd data-format="{{answer_id}}"></dd>
+							<dt>Score</dt>		<dd data-format="{{score}}"></dd>
+							<dt>Upped</dt>		<dd data-format="{{up_vote_count}}"></dd>
+							<dt>Downed</dt>		<dd data-format="{{down_vote_count}}"></dd>
+							<dt>Comments</dt>	<dd data-format="{{comment_count}}"></dd>
+							<dt>Created</dt>	<dd data-format="{{creation_date}}"></dd>
+							<dt>Activity</dt>	<dd data-format="{{last_activity_date}}"></dd>
+							<dt>Edited</dt>		<dd data-format="{{last_edit_date}}"></dd>
+						</dl>
+					</header>
+					<a target="blank" data-href="link" data-format="{{link}}"></a>
+				</article>
+			</section>
+		</section>
+	</section>
+</section>

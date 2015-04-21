@@ -1,0 +1,39 @@
+.tags-cloud {
+	float: left;
+	width: 400px;
+	position: relative;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.tags-cloud > *, .tags-cloud > *:hover, .tags-cloud > *:visited, .tags-cloud > *:active {
+	display: block;
+	float: left;
+	padding: 1px 5px;
+	text-shadow: 0px 0px 5px white, 0px 0px 4px white, 0px 0px 3px white, 0px 0px 2px white, 0px 0px 1px white;
+	vertical-align: middle;
+	transition: all .5s ease;
+	cursor: pointer;
+	color: white;
+}
+
+.tags-cloud > *:nth-child(2n+1) {
+	float: right;
+}
+
+.tags-cloud > *                 { font-size: 10px; opacity: .1; }
+.tags-cloud .strength-1 { font-size: 14px; opacity: .1; }
+.tags-cloud .strength-2 { font-size: 18px; opacity: .1; }
+.tags-cloud .strength-3 { font-size: 22px; opacity: .2; }
+.tags-cloud .strength-4 { font-size: 26px; opacity: .3; }
+.tags-cloud .strength-5 { font-size: 30px; opacity: .4; }
+.tags-cloud .strength-6 { font-size: 34px; opacity: .5; }
+.tags-cloud .strength-7 { font-size: 38px; opacity: .6; }
+.tags-cloud .strength-8 { font-size: 42px; opacity: .7; }
+.tags-cloud .strength-9 { font-size: 46px; opacity: .8; }
+.tags-cloud .strength-10 { font-size: 50px; opacity: .9; }
+
+.tags-cloud > *:hover {
+	opacity: 1 !important;
+	text-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent, 0px 0px 0px transparent, 0px 0px 0px transparent, 0px 0px 0px transparent;
+}

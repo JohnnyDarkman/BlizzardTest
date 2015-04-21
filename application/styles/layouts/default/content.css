@@ -1,0 +1,43 @@
+a, a:hover, a:visited, a:active, a:focus {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.branded {
+	position: relative;
+	vertical-align: middle;
+}
+
+.branded:before {
+	content: '';
+	display: inline-block;
+	margin: 0px 5px;
+	width: 44px;
+	height: 44px;
+	vertical-align: middle;
+	background: url('../../assets/images/brand.png') 50% 50% no-repeat transparent;
+	background-size: 100% auto;
+}
+
+.right { text-align: right; }
+.left { text-align: left; }
+.center { text-align: center; }
+
+.pull-right { float: right; }
+.pull-left { float: left; }
+
+.float-container:after {
+	content: '';
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	height: 0px;
+	clear: both;
+}
+
+dl, dt, dd {
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}

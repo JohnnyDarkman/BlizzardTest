@@ -1,0 +1,32 @@
+<h1>services/http.js</h1>
+<p>
+	A general AJAX wrapper that provides global and session request configurations.
+	The service itself resolves per scope, but has a singleton registry which allows
+	global configurations to be set for the entire application.
+</p>
+<p>
+	The HTTP service provides simplified REST methods:
+</p>
+<code><pre>
+http.get   ('uri', {params}, function success(), [function error(), [{headers}, [{config}]]])
+http.delete('uri', {params}, function success(), [function error(), [{headers}, [{config}]]])
+http.post  ('uri', {body},   function success(), [function error(), [{headers}, [{config}]]])
+http.patch ('uri', {body},   function success(), [function error(), [{headers}, [{config}]]])
+http.put   ('uri', {body},   function success(), [function error(), [{headers}, [{config}]]])
+</pre></code>
+<p>
+	The success and error methods are given a context (this) of an object containing all of the
+	request/response data. 
+</p>
+<code><pre>
+{
+   timeout: boolean,
+   state: int,
+   response: object,
+   responseText: string,
+   responseType: string,
+   status: int,
+   statusText: string,
+   getHeaders: function
+}
+</pre></code>

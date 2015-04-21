@@ -1,0 +1,29 @@
+<div class="person">
+	<img data-src="owner.profile_image" />
+	<dl>
+		<dt>User Id</dt>	<dd><a data-href="owner.link" data-format="{{owner.user_id}}" target="blank"></a></dd>
+		<dt>Name</dt>		<dd data-format="{{owner.display_name}}"></dd>
+		<dt>Acceptance</dt>	<dd data-format="{{owner.accept_rate}}"></dd>
+	</dl>
+</div>
+<div class="data">
+	<dl>
+		<dt>Question Id</dt>	<dd><a data-format="{{question_id}}" data-href="link" target="blank"></a></dd>
+		<dt>Answers</dt>		<dd data-format="{{answer_count}}"></dd>
+		<dt>Score</dt>			<dd data-format="{{score}}"></dd>	
+		<dt data-show="parent.authenticated">Vote</dt> 
+		<dd data-show="parent.authenticated">
+			<strong><a data-click="parent.upvote">&#8593;</a></strong>
+			<strong><a data-click="parent.downvote">&#8595;</a></strong>
+		</dd>
+		<dt data-show="parent.authenticated">Favorite</dt>
+		<dd data-show="parent.authenticated"><strong><a data-click="parent.fav">+</a></strong></dd>
+	</dl>
+</div>
+<article>
+	<div data-format="{{title}}"></div>
+	<div data-html="body"></div>
+	<div class="tags">
+		<div data-template="tags" data-format="{{value}}" data-click="link"></div>
+	</div>
+</article>

@@ -1,0 +1,196 @@
+.question > article > .person {
+	float: left;
+	background: rgba(255, 255, 255, .1);
+	padding: 25px 0px 25px 25px;
+	width: 40%;
+	height: 178px;
+}
+
+.question > article > .person:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.question > article > .person img {
+	display: block;
+	float: left;
+	margin: 0px 25px 0px 0px;
+	width: 128px;
+	height: 128px;
+}
+
+.question > article > .person dl {
+	display: block;
+	position: relative;
+	float: left;
+	white-space: nowrap;
+	width: 200px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.question > article > .person dl:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.question > article > .person dl > * {
+	padding: 0px;
+	margin: 0px 0px 10px;
+}
+
+.question > article > .person dl dt {
+	display: block;
+	width: 50%;
+	float: left;
+	clear: left;
+}
+
+.question > article > .person dl dd {
+	display: block;
+	width: 50%;
+	float: right;
+	clear: right;
+}
+
+.question > article > .data {
+	width: 60%;
+	background: rgba(255, 255, 255, .1);
+	float: left;
+	padding: 25px;
+	height: 70px;
+}
+
+.question > article > .data dl {
+	white-space: nowrap;
+	padding: 0px;
+	margin: 0px;
+}
+
+.question > article > .data dl:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.question > article > .data dl > * {
+	display: inline-block;
+	margin: 0px 5px 0px 0px;
+	padding: 0px;
+	-webkit-margin-start: 0px;
+}
+
+.question > article > .data dl > dt:after {
+	content: ':';
+}
+
+.question > article > .data dl > dd {
+	margin-right: 25px;
+}
+
+.question > article > article > div:first-child {
+	height: 108px;
+	width: 60%;
+	padding: 0px 25px;
+	font-weight: bold;
+	font-size: 24px;
+	background: rgba(255, 255, 255, .1);
+	float: left;
+	overflow: hidden;
+	overflow-y: auto;
+	word-break: break-word;
+}
+
+.question > article > article > div:nth-of-type(2):before {
+	content: '';
+	display: block;
+	border-top: 1px solid white;
+}
+
+.question > article > article > div:nth-of-type(2) {
+	clear: both;
+	padding: 25px 0px;
+}	
+
+.question article code {
+	border: 1px solid rgba(0, 0, 0, .75);
+	background: rgba(0, 0, 0, .1);
+	overflow: auto;
+	padding: 25px;
+	display: block;
+	margin: 25px 0px;
+	width: 100%;
+}
+
+.question article pre {
+	display: block;
+	margin-bottom: 25px;
+	padding-bottom: 25px;
+}
+
+.question > article > article img {
+	display: inline-block;
+	max-width: 100%;
+	margin: 5px 0px;
+}	
+
+.question > .answers .answer {
+	margin-bottom: 50px;
+	position: relative;
+	background: rgba(255, 255, 255, .05);
+}
+
+.question > .answers .answer:before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: -25px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	padding: 1px;
+	width: 100%;
+}
+
+.question > .answers .answer > .person {
+	background: rgba(255, 255, 255, .1);
+	padding: 0px;
+}
+
+.question > .answers .answer.accepted {
+	background: rgba(128, 255, 128, .1);
+	padding-bottom: 25px;
+}
+
+.question > .answers .answer > .person > * {
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.question > .answers .answer > .person > img {
+	width: 24px; height: 24px;
+}
+
+.question > .answers .answer > .person > dl {
+	margin: 0px;
+}
+
+.question > .answers .answer > .person > dl > * {
+	-webkit-margin-start: 0px;
+	display: inline-block;
+	margin: 0px 5px;
+	padding: 0px;
+}
+
+.question > .answers .answer > article {
+	padding: 0px 25px;
+	font-size: 14px;
+}
+
+.question > .answers .answer > article p {
+	margin: 5px 0px 0px;
+	padding: 0px;
+	word-break: break-word;
+}

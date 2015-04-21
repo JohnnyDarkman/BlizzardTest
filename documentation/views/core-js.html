@@ -1,0 +1,39 @@
+<h1>core.js</h1>
+<p>
+	Aptly named, Core.js is probably one of the least interesting parts of my framework. 
+	It provides very basic functionality to support dependency management and extending 
+	functionality. Anything of interest can be found in the framework/services and
+	framework/bindings folder.
+</p>
+<p>
+	The Application constructor here is usually all you will worry about as a consumer
+	of this framework. Once you instantiate an "Application" you can start adding view
+	models and functionality to your page.
+</p>
+<p>
+	If you are looking to add customizations you can use the .extend() function prior
+	to instantiation. Extending the application in this way will offer you a chance to
+	edit the application object before it is locked down. This type of extension should
+	normally only be used for core functionality.
+</p>
+<p>
+	More often you will be looking to add new bindings to your application. This is
+	accomplished using the "Application.extend.binding()" function added by the 
+	binding.js extension. Use this prior to constructing "Application" to add a new
+	binding.
+</p>
+<p>
+	To start your application you will need to instantiate a new "Application" object.
+</p>
+<code><pre>var myApplication = new Application(document)</pre></code>
+<p>
+	The passing of a node marks the root element your application will operate at.
+	It is possible to have multiple applications running on the same page but is not
+	recommended and applications should never be nested. If there was to be future
+	implementations of this framework I would add some blocking to this.
+</p>
+<p><strong>Related Stuff:</strong></p>
+<dl>
+	<dt>Add Bindings</dt>		<dd><a href="#services-bindings">services/bindings.js</a></dd>
+	<dt>Add ViewModels</dt>		<dd><a href="#bindings-view-model">bindings/view-model.js</a></dd>
+</dl>

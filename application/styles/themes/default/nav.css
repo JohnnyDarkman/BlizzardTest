@@ -1,0 +1,39 @@
+nav {
+	font-size: 11px;
+}
+
+body > header > nav {
+	background: -moz-linear-gradient(top,  rgba(45,45,45,1) 0%, rgba(56,56,56,1) 25%, rgba(56,56,56,1) 75%, rgba(45,45,45,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(45,45,45,1)), color-stop(25%,rgba(56,56,56,1)), color-stop(75%,rgba(56,56,56,1)), color-stop(100%,rgba(45,45,45,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(45,45,45,1) 0%,rgba(56,56,56,1) 25%,rgba(56,56,56,1) 75%,rgba(45,45,45,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(45,45,45,1) 0%,rgba(56,56,56,1) 25%,rgba(56,56,56,1) 75%,rgba(45,45,45,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(45,45,45,1) 0%,rgba(56,56,56,1) 25%,rgba(56,56,56,1) 75%,rgba(45,45,45,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(45,45,45,1) 0%,rgba(56,56,56,1) 25%,rgba(56,56,56,1) 75%,rgba(45,45,45,1) 100%); /* W3C */
+	box-shadow: 3px 3px 3px -3px #000000;
+	float: right;
+}
+
+aside > nav {
+	font-size: 14px;
+}
+
+aside > nav > ul > li {
+	overflow: hidden;
+	white-space: nowrap;
+	border-right: none;
+}
+
+aside > nav > ul > li > a:after {
+	content: '';
+	width: 100%;
+	vertical-align: middle;
+	display: inline-block;
+	border-bottom: 1px solid rgba(255, 255, 255, .5);
+	white-space: nowrap;
+	margin-left: 25px;
+	transition: .5s all ease;
+}
+
+aside > nav > ul > li > a:hover:after {
+	margin-left: 15px;
+}

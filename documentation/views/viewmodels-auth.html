@@ -1,0 +1,14 @@
+<h1>viewmodels/auth.js</h1>
+<p>
+	This viewmodel manages bindings and syncs with the "services/auth.js" service.
+	It can also be used as a parent view model to provide auth bindings and information
+	to other nested view models.
+</p>
+<p>
+	The auth view model provides two command handlers "login" and "logout" which operate
+	the underlying auth service to manage the user's authentication state.
+<p>
+<p>
+	The view model keeps in sync with the service using the listen feature provided by the
+	view object which will unsubscribe from the broadcast channel when the view is destroyed.
+</p>
