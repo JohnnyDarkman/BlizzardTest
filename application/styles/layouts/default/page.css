@@ -49,8 +49,8 @@ body > main > section {
 
 body > main > section > aside {
 	flex-grow: 0;
-	width: 300px;
-	min-width: 300px;
+	width: 400px;
+	min-width: 400px;
 }
 
 section, body > main > section > article,

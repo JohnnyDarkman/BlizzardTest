@@ -3,3 +3,8 @@ body > main > section > article {
 	padding: 10px;
 	border-radius: 3px;
 }
+
+body > main > section > aside {
+	width: 300px;
+	min-width: 300px;
+}
